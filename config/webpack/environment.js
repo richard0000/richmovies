@@ -1,3 +1,5 @@
-const { environment } = require('@rails/webpacker')
+const { environment } = require("@rails/webpacker");
+const lessLoader = require("./lessLoader");
 
-module.exports = environment
+environment.loaders.prepend("style", lessLoader);
+module.exports = environment;
