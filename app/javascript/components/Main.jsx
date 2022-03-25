@@ -1,14 +1,18 @@
 import React from "react";
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";
+import { useNavigate } from "react-router-dom";
 
 const Main = ({ children }) => {
+  const navigate = useNavigate();
   return (
     <Layout>
       <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item key="movies">Movies</Menu.Item>
+          <Menu.Item key="movies" onClick={() => navigate("/movies")}>
+            Movies
+          </Menu.Item>
           <Menu.Item key="tv-shows">TV Shows</Menu.Item>
           <Menu.Item key="people">People</Menu.Item>
           <Menu.Item key="more">More</Menu.Item>

@@ -1,20 +1,29 @@
-import { Card, Progress, Skeleton, Space } from "antd";
+import { Card, Progress } from "antd";
 import _ from "lodash";
 import React from "react";
 import { imageUrl } from "../services/api";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
+
+  const handleMovieClick = () => {
+    navigate(`/movies/${movie.id}`);
+  };
+
   return (
     <Card
+      onClick={() => handleMovieClick()}
       bordered={false}
       style={{
         width: 250,
-        height: 425,
+        minHeight: 425,
         margin: "20px",
         borderRadius: "20px",
         overflow: "hidden",
         padding: "12px",
+        cursor: "pointer",
       }}
       cover={
         <img
