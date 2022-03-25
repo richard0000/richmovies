@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchCast, fetchCrew, fetchMovie, imageUrl } from "../services/api";
 import CastCard from "./CastCard";
 import Main from "./Main";
+import MovieMetadata from "./MovieMetadata";
 
 const Movie = () => {
   const [movie, setMovie] = useState(null);
@@ -77,21 +78,14 @@ const Movie = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
+              opacity: 0.05,
+              height: "25rem",
             }}
-          >
-            <Col span={8}>
-              <img
-                alt={`Movie poster for ${movie.title}`}
-                src={imageUrl(movie.posterPath)}
-                style={{
-                  borderRadius: "20px",
-                  width: "250px",
-                }}
-              />
-            </Col>
-            <Col span={16}></Col>
+          ></Row>
+          <Row style={{ position: "relative", top: "-25rem" }}>
+            <MovieMetadata movie={movie} crew={crew} />
           </Row>
-          <Row>
+          <Row style={{ position: "relative", top: "-20rem" }}>
             {cast ? (
               <>
                 <h2 style={{ color: "white" }}>Top Billed Cast</h2>

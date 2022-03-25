@@ -10,7 +10,7 @@ const Main = ({ children }) => {
       <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item key="movies" onClick={() => navigate("/movies")}>
+          <Menu.Item key="movies" onClick={() => navigate("/")}>
             Movies
           </Menu.Item>
           <Menu.Item key="tv-shows">TV Shows</Menu.Item>

@@ -14,6 +14,7 @@ const MovieCard = ({ movie }) => {
 
   return (
     <Card
+      hoverable
       onClick={() => handleMovieClick()}
       bordered={false}
       style={{
