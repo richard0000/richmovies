@@ -18,10 +18,6 @@ const Main = ({ children }) => {
         className="site-layout"
         style={{ padding: "0 50px", marginTop: 64 }}
       >
-        <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>Movies</Breadcrumb.Item>
-        </Breadcrumb>
         <div
           className="site-layout-background"
           style={{ padding: 24, minHeight: 380 }}
@@ -30,7 +26,7 @@ const Main = ({ children }) => {
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        Rich Movies. Not all rights reserved ¯\_(ツ)_/¯
+        &copy; 2021 - All rights reserved
       </Footer>
     </Layout>
   );

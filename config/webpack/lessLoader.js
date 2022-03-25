@@ -5,12 +5,14 @@ module.exports = getStyleRule(/\.less$/i, false, [
   {
     loader: "less-loader",
     options: {
-      modifyVars: {
-        ...getThemeVariables({
-          dark: true,
-          compact: true,
-        }),
-        "primary-color": "#39c486",
+      lessOptions: {
+        modifyVars: {
+          ...getThemeVariables({
+            dark: true,
+            compact: true,
+          }),
+          "primary-color": "#39c486",
+        },
       },
       javascriptEnabled: true,
     },

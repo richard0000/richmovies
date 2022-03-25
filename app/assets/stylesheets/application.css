@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+header.ant-layout-header,
+footer,
+.ant-menu {
+  background: #1c1c24 !important;
+  color: #5f5f6e !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #1c1c24 !important;
+  color: white;
+}
+
+main,
+.site-layout-background > h1 {
+  background: #131419 !important;
+  color: white;
+}
+
+.ant-card,
+.ant-card-body {
+  background: #1c1c24 !important;
+  color: #5f5f6e !important;
+}
+
+.ant-card-body {
+  padding: 0 !important;
+}
+
+main {
+  border-top: 1px solid #5f5f6e;
+}
+
+footer {
+  border-top: 1px solid #5f5f6e;
+}

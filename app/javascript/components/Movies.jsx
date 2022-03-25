@@ -35,6 +35,7 @@ const Movies = () => {
       ) : (
         <>
           {errors ? <Alert message={errors} type="error" /> : ""}
+          <h1>Popular Movies</h1>
           <List
             grid={{
               xs: 1,
