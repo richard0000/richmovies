@@ -28,7 +28,7 @@ module MoviesHelper
   def crew(id)
     crew = Tmdb::Movie.crew(id)
 
-    crew.sort_by!(&:popularity).reverse
+    crew.sort_by!(&:popularity).reverse.first(8)
   end
 
   private
