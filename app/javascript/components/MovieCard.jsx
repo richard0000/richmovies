@@ -1,4 +1,4 @@
-import { Card, Skeleton } from "antd";
+import { Card, Progress, Skeleton, Space } from "antd";
 import _ from "lodash";
 import React from "react";
 import { imageUrl } from "../services/api";
@@ -10,7 +10,7 @@ const MovieCard = ({ movie }) => {
       bordered={false}
       style={{
         width: 250,
-        height: 450,
+        height: 425,
         margin: "20px",
         borderRadius: "20px",
         overflow: "hidden",
@@ -36,7 +36,14 @@ const MovieCardFooter = ({ movie }) => {
 
   return (
     <>
-      <p>{`${vote}%`}</p>
+      <Progress
+        style={{ position: "relative", top: "-20px", left: "175px" }}
+        strokeColor={"#50d86a"}
+        trailColor={"#103517"}
+        type="circle"
+        percent={vote}
+        width={32}
+      />
       <p
         style={{
           color: "white",

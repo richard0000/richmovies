@@ -45,6 +45,10 @@ main {
   border-top: 1px solid #5f5f6e;
 }
 
+.ant-progress-text {
+  color: white !important;
+}
+
 footer {
   border-top: 1px solid #5f5f6e;
 }
